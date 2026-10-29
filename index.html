@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8eaf1">
+<title>For Fathima ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #f8eaf1;
+  --pink2: #f0d6e5;
+  --lavender: #ded0ed;
+  --purple: #9275a6;
+  --deep: #493653;
+  --cream: #fffaf5;
+  --text: #514456;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.page {
+  display: none;
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  animation: pageEnter .65s ease both;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* NAVIGATION */
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 6%;
+  background: linear-gradient(to bottom, rgba(255,250,245,.9), transparent);
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--deep);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links button {
+  border: none;
+  background: none;
+  color: var(--deep);
+  font-size: 11px;
+}
+
+.nav-links button:hover {
+  color: #bd7ca1;
+}
+
+.page-count {
+  position: absolute;
+  bottom: 20px;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d6c5d9;
+  transition: .3s;
+}
+
+.dot.active {
+  background: var(--purple);
+  transform: scale(1.3);
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 23px;
+  background: var(--purple);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(92,64,109,.18);
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-light {
+  background: white;
+  color: var(--deep);
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: 30;
+  pointer-events: none;
+  animation: floatUp 7s linear forwards;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: .8; }
+  100% { transform: translateY(-115vh) rotate(35deg); opacity: 0; }
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+.script {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  color: #b77fa6;
+}
+
+/* PAGE 1 — WELCOME */
+
+#page1 {
+  background: linear-gradient(130deg, #f8eaf1, #eee2f5, #fff5e9);
+  align-items: center;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 100px 8% 80px;
+  gap: 35px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1.15;
+  font-weight: 400;
+  color: var(--deep);
+}
+
+.hero-text {
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 20px 0 25px;
+}
+
+.hero-image-wrap {
+  position: relative;
+  max-width: 440px;
+  margin: auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 48% 48% 18px 18px;
+  box-shadow: 0 20px 50px rgba(79,53,85,.17);
+}
+
+.image-caption {
+  position: absolute;
+  left: -25px;
+  bottom: 30px;
+  background: white;
+  padding: 14px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px #49365318;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  transform: rotate(-5deg);
+}
+
+/* PAGE 2 — BRIDE */
+
+#page2 {
+  background: linear-gradient(140deg, #fff7f2, #f2e3f3);
+  align-items: center;
+}
+
+.bride-layout {
+  width: 100%;
+  min-height: 100svh;
+  padding: 100px 8% 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.bride-photo-frame {
+  max-width: 400px;
+  margin: auto;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 15px 40px #49365318;
+  transform: rotate(-3deg);
+  transition: .5s;
+}
+
+.bride-photo-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.bride-photo {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.bride-caption {
+  text-align: center;
+  padding: 14px 5px 5px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 23px;
+}
+
+.bride-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.bride-text p {
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 25px;
+  max-width: 380px;
+}
+
+/* PAGE 3 — MEMORIES */
+
+#page3 {
+  background: #fff9f4;
+  align-items: center;
+}
+
+.memories-wrap {
+  width: 100%;
+  min-height: 100svh;
+  padding: 110px 6% 80px;
+  text-align: center;
+}
+
+.memories-wrap h2,
+.cats-wrap h2,
+.wishes-wrap h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(34px, 5vw, 53px);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0 auto 32px;
+  max-width: 400px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.polaroid {
+  background: white;
+  padding: 9px 9px 18px;
+  box-shadow: 0 8px 25px #49365312;
+  transition: .4s;
+}
+
+.polaroid:nth-child(1) { transform: rotate(-4deg); }
+.polaroid:nth-child(2) { transform: translateY(12px) rotate(2deg); }
+.polaroid:nth-child(3) { transform: rotate(4deg); }
+
+.polaroid:hover {
+  transform: translateY(-8px) rotate(0);
+}
+
+.polaroid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid p {
+  padding-top: 12px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 19px;
+}
+
+/* PAGE 4 — CAT CORNER */
+
+#page4 {
+  background: linear-gradient(145deg, #f4e9f5, #fff3ec);
+  align-items: center;
+}
+
+.cats-wrap {
+  width: 100%;
+  min-height: 100svh;
+  padding: 105px 6% 80px;
+  text-align: center;
+}
+
+.cat-intro {
+  font-size: 13px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
+.cat-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.cat-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 30px #49365316;
+  transition: .4s;
+}
+
+.cat-card:hover {
+  transform: translateY(-7px);
+}
+
+.cat-card img {
+  width: 100%;
+  height: 245px;
+  display: block;
+  object-fit: cover;
+  transition: .6s;
+}
+
+.cat-card:hover img {
+  transform: scale(1.05);
+}
+
+.cat-card-content {
+  padding: 17px 10px 20px;
+}
+
+.cat-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.cat-card p {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.cat-card button {
+  border: none;
+  background: #f1e5f4;
+  color: var(--deep);
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-top: 12px;
+  font-size: 11px;
+}
+
+.cat-card button:hover {
+  background: var(--purple);
+  color: white;
+}
+
+.cat-message {
+  min-height: 24px;
+  margin-top: 18px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 23px;
+  color: #956a98;
+}
+
+/* PAGE 5 — WISHES */
+
+#page5 {
+  background: linear-gradient(160deg, #f7e8f0, #e9dcf3, #fff3e6);
+  align-items: center;
+}
+
+.wishes-wrap {
+  width: 100%;
+  min-height: 100svh;
+  padding: 110px 7% 80px;
+  text-align: center;
+}
+
+.wishes-wrap > p {
+  font-size: 13px;
+  margin-bottom: 35px;
+}
+
+.wishes-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.wish-card {
+  background: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 20px;
+  padding: 28px 15px;
+  box-shadow: 0 8px 25px #49365310;
+  transition: .4s;
+}
+
+.wish-card:hover {
+  transform: translateY(-8px);
+}
+
+.wish-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.wish-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.wish-card p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.bottom-cat {
+  margin-top: 28px;
+  font-size: 35px;
+  animation: kittyFloat 3s ease-in-out infinite;
+}
+
+/* PAGE 6 — FINAL WISH */
+
+#page6 {
+  background:
+    linear-gradient(180deg, rgba(49,35,66,.35), rgba(49,35,66,.75)),
+    url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85')
+    center/cover;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+#page6 .nav {
+  background: linear-gradient(to bottom, rgba(30,20,40,.25), transparent);
+}
+
+#page6 .logo,
+#page6 .nav-links button {
+  color: white;
+}
+
+.final-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 100px 8% 85px;
+}
+
+.final-content .eyebrow { color: #f4d7e9; }
+
+.final-heart {
+  font-size: 35px;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+}
+
+.final-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(39px, 7vw, 72px);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.final-content .script { color: #f7cce2; }
+
+.final-content p {
+  max-width: 440px;
+  margin: 0 auto 28px;
+  font-size: 13px;
+  line-height: 2;
+  color: #fff5fb;
+}
+
+.final-cats {
+  margin: 10px 0 25px;
+  font-size: 36px;
+  letter-spacing: 12px;
+}
+
+/* FLOATING CAT GUIDE */
+
+#kitty-guide {
+  position: fixed;
+  right: 14px;
+  bottom: 62px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: 230px;
+}
+
+#kitty-character {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  border: 3px solid white;
+  border-radius: 50%;
+  overflow: visible;
+  background: white;
+  box-shadow: 0 5px 25px #49365330;
+  animation: kittyFloat 3s ease-in-out infinite;
+}
+
+#kitty-character img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.kitty-paw {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  font-size: 23px;
+  animation: kittyPaw 2s infinite;
+}
+
+#kitty-bubble {
+  position: relative;
+  width: 220px;
+  padding: 18px 15px 14px;
+  background: rgba(255,250,255,.98);
+  border: 1px solid #e8d6ed;
+  border-radius: 18px 18px 4px 18px;
+  box-shadow: 0 8px 30px #49365320;
+  animation: kittyAppear .4s ease;
+}
+
+#kitty-message {
+  margin: 0 12px 12px 0;
+  font-family: 'Dancing Script', cursive;
+  color: #594261;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#kitty-close {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  border: none;
+  background: transparent;
+  color: #9275a6;
+  font-size: 20px;
+}
+
+#kitty-next {
+  border: none;
+  border-radius: 20px;
+  padding: 9px 16px;
+  background: #9275a6;
+  color: white;
+  font-size: 11px;
+  transition: .3s;
+}
+
+#kitty-next:hover {
+  background: #493653;
+  transform: translateY(-2px);
+}
+
+@keyframes kittyFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes kittyPaw {
+  0%,100% { transform: rotate(-10deg); }
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes kittyAppear {
+  from { opacity: 0; transform: translateY(10px) scale(.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .nav { padding: 15px 5%; }
+  .logo { font-size: 21px; }
+  .nav-links { gap: 10px; }
+
+  .nav-links button { font-size: 10px; }
+
+  .nav-links button:nth-child(3),
+  .nav-links button:nth-child(4) {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 100px 7% 100px;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image-wrap { width: 85%; max-width: 330px; }
+  .hero-image { height: 300px; }
+  .image-caption { left: -12px; bottom: 15px; }
+
+  .bride-layout {
+    grid-template-columns: 1fr;
+    padding: 95px 8% 100px;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .bride-photo-frame { max-width: 275px; }
+  .bride-photo { height: 330px; }
+
+  .bride-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .memories-wrap,
+  .cats-wrap {
+    padding: 100px 5% 100px;
+  }
+
+  .gallery,
+  .cat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .polaroid img { height: 150px; }
+
+  .polaroid:nth-child(3) {
+    grid-column: 1 / -1;
+    width: 65%;
+    justify-self: center;
+    transform: rotate(-2deg);
+  }
+
+  .polaroid:nth-child(3) img { height: 180px; }
+  .cat-card img { height: 155px; }
+  .cat-card h3 { font-size: 17px; }
+  .cat-card p { font-size: 10px; }
+
+  .wishes-grid {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+    gap: 13px;
+  }
+
+  .wish-card { padding: 18px 16px; }
+  .wish-icon { font-size: 26px; margin-bottom: 7px; }
+  .wish-card h3 { margin-bottom: 6px; }
+
+  .final-content { padding: 100px 7% 100px; }
+
+  #kitty-guide {
+    right: 9px;
+    bottom: 58px;
+  }
+
+  #kitty-character {
+    width: 72px;
+    height: 72px;
+  }
+
+  #kitty-bubble { width: 195px; }
+  #kitty-message { font-size: 18px; }
+
+  .page-count { bottom: 15px; }
+}
+
+@media (max-width: 360px) {
+  .nav-links { gap: 7px; }
+  .nav-links button { font-size: 9px; }
+  .hero h1 { font-size: 38px; }
+  .cat-card img { height: 135px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: WELCOME -->
+
+<section class="page active" id="page1">
+  <nav class="nav">
+    <div class="logo">For Fathima ♡</div>
+    <div class="nav-links">
+      <button onclick="showPage(1)">Home</button>
+      <button onclick="showPage(3)">Memories</button>
+      <button onclick="showPage(4)">Cats</button>
+      <button onclick="showPage(5)">Wishes</button>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">A little surprise, made with love</div>
+
+      <h1>For you,<br><span class="script">Fathima ♡</span></h1>
+
+      <p class="hero-text">
+        Some people make life more beautiful just by being part of it.
+        This little corner is filled with love, memories, and furry friends.
+      </p>
+
+      <button class="btn" onclick="showPage(2)">
+        Open your surprise ♡
+      </button>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img class="hero-image"
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=85"
+        alt="Beautiful cat">
+
+      <div class="image-caption">A little happiness ♡</div>
+    </div>
+  </div>
+
+  <div class="page-count">
+    <div class="dots" id="dots1"></div>
+    <span>01 / 06　♡</span>
+  </div>
+</section>
+
+
+<!-- PAGE 2: BRIDE -->
+
+<section class="page" id="page2">
+  <nav class="nav">
+    <div class="logo">For Fathima ♡</div>
+    <div class="nav-links">
+      <button onclick="showPage(1)">Home</button>
+      <button onclick="showPage(3)">Memories</button>
+      <button onclick="showPage(4)">Cats</button>
+      <button onclick="showPage(5)">Wishes</button>
+    </div>
+  </nav>
+
+  <div class="bride-layout">
+    <div class="bride-photo-frame">
+      <img class="bride-photo"
+        src="images/bride.jpg"
+        alt="Fathima's photo"
+        onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85'">
+
+      <div class="bride-caption">Your beautiful new chapter ♡</div>
+    </div>
+
+    <div class="bride-text">
+      <div class="eyebrow">A beautiful new beginning</div>
+
+      <h2>Look at you,<br><span class="script">beautiful bride.</span></h2>
+
+      <p>
+        A new chapter, a new adventure, and a lifetime of little moments
+        waiting to become beautiful memories. May your heart always feel
+        loved, your home feel peaceful, and your smile never fade.
+      </p>
+
+      <button class="btn" onclick="showPage(3)">Our memories ♡</button>
+    </div>
+  </div>
+
+  <div class="page-count">
+    <div class="dots" id="dots2"></div>
+    <span>02 / 06　♡</span>
+  </div>
+</section>
+
+
+<!-- PAGE 3: MEMORIES -->
+
+<section class="page" id="page3">
+  <nav class="nav">
+    <div class="logo">For Fathima ♡</div>
+    <div class="nav-links">
+      <button onclick="showPage(1)">Home</button>
+      <button onclick="showPage(3)">Memories</button>
+      <button onclick="showPage(4)">Cats</button>
+      <button onclick="showPage(5)">Wishes</button>
+    </div>
+  </nav>
+
+  <div class="memories-wrap">
+    <div class="eyebrow">The moments we keep</div>
+
+    <h2>Little memories.<br><span class="script">Endless meaning.</span></h2>
+
+    <p class="subheading">
+      Ordinary days become extraordinary when they are shared
+      with the right people.
+    </p>
+
+    <div class="gallery">
+      <div class="polaroid">
+        <img src="images/memory1.jpg" alt="Our memory"
+          onerror="this.src='https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80'">
+        <p>Little moments ♡</p>
+      </div>
+
+      <div class="polaroid">
+        <img src="images/memory2.jpg" alt="A happy memory"
+          onerror="this.src='https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=600&q=80'">
+        <p>Our happy days</p>
+      </div>
+
+      <div class="polaroid">
+        <img src="images/memory3.jpg" alt="A treasured memory"
+          onerror="this.src='https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80'">
+        <p>Always treasured ♡</p>
+      </div>
+    </div>
+
+    <br><br>
+
+    <button class="btn" onclick="showPage(4)">Meet your furry friends 🐾</button>
+  </div>
+
+  <div class="page-count">
+    <div class="dots" id="dots3"></div>
+    <span>03 / 06　♡</span>
+  </div>
+</section>
+
+
+<!-- PAGE 4: CAT CORNER -->
+
+<section class="page" id="page4">
+  <nav class="nav">
+    <div class="logo">For Fathima ♡</div>
+    <div class="nav-links">
+      <button onclick="showPage(1)">Home</button>
+      <button onclick="showPage(3)">Memories</button>
+      <button onclick="showPage(4)">Cats</button>
+      <button onclick="showPage(5)">Wishes</button>
+    </div>
+  </nav>
+
+  <div class="cats-wrap">
+    <div class="eyebrow">A little corner just for you</div>
+
+    <h2>Tiny paws,<br><span class="script">endless love.</span> 🐾</h2>
+
+    <p class="cat-intro">
+      Because every special girl deserves a little extra cat happiness.
+      Tap a button to discover a tiny message!
+    </p>
+
+    <div class="cat-grid">
+      <div class="cat-card">
+        <img
+          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=85"
+          alt="Cat looking at the camera" loading="lazy">
+
+        <div class="cat-card-content">
+          <h3>The Sweetheart</h3>
+          <p>Soft eyes, tiny paws, and a heart full of love.</p>
+          <button onclick="catMessage('Sweetheart')">Give me a hug ♡</button>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <img
+          src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=700&q=85"
+          alt="Playful cat" loading="lazy">
+
+        <div class="cat-card-content">
+          <h3>The Little Boss</h3>
+          <p>Small cat, big attitude, absolutely adorable.</p>
+          <button onclick="catMessage('Boss')">Make me smile ♡</button>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <img
+          src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=85"
+          alt="Fluffy cat" loading="lazy">
+
+        <div class="cat-card-content">
+          <h3>The Cuddle Bug</h3>
+          <p>Professional napper and expert happiness giver.</p>
+          <button onclick="catMessage('Cuddle')">Send some love ♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-message" id="catMessage">
+      Pick a little friend above ♡
+    </div>
+
+    <br>
+
+    <button class="btn" onclick="showPage(5)">A few wishes for you ✨</button>
+  </div>
+
+  <div class="page-count">
+    <div class="dots" id="dots4"></div>
+    <span>04 / 06　♡</span>
+  </div>
+</section>
+
+
+<!-- PAGE 5: WISHES -->
+
+<section class="page" id="page5">
+  <nav class="nav">
+    <div class="logo">For Fathima ♡</div>
+    <div class="nav-links">
+      <button onclick="showPage(1)">Home</button>
+      <button onclick="showPage(3)">Memories</button>
+      <button onclick="showPage(4)">Cats</button>
+      <button onclick="showPage(5)">Wishes</button>
+    </div>
+  </nav>
+
+  <div class="wishes-wrap">
+    <div class="eyebrow">For your forever</div>
+
+    <h2>Three little wishes<br><span class="script">for your forever.</span></h2>
+
+    <p>Nothing complicated. Just three beautiful things I wish for you.</p>
+
+    <div class="wishes-grid">
+      <div class="wish-card">
+        <div class="wish-icon">♡</div>
+        <h3>A lasting love</h3>
+        <p>May you choose each other again and again through every season of life.</p>
+      </div>
+
+      <div class="wish-card">
+        <div class="wish-icon">⌂</div>
+        <h3>A happy home</h3>
+        <p>May your home be filled with laughter, warm hugs, and beautiful moments.</p>
+      </div>
+
+      <div class="wish-card">
+        <div class="wish-icon">☾</div>
+        <h3>A peaceful life</h3>
+        <p>May you always find comfort in each other and reasons to smile every day.</p>
+      </div>
+    </div>
+
+    <div class="bottom-cat">🐈 ♡ 🐾</div>
+
+    <br>
+
+    <button class="btn" onclick="showPage(6)">One last little surprise ✨</button>
+  </div>
+
+  <div class="page-count">
+    <div class="dots" id="dots5"></div>
+    <span>05 / 06　♡</span>
+  </div>
+</section>
+
+
+<!-- PAGE 6: WEDDING FINALE -->
+
+<section class="page" id="page6">
+  <nav class="nav">
+    <div class="logo">For Fathima ♡</div>
+    <div class="nav-links">
+      <button onclick="showPage(1)">Home</button>
+      <button onclick="showPage(3)">Memories</button>
+      <button onclick="showPage(4)">Cats</button>
+      <button onclick="showPage(5)">Wishes</button>
+    </div>
+  </nav>
+
+  <div class="final-content">
+    <div class="eyebrow">From my heart to yours</div>
+
+    <div class="final-heart">♡</div>
+
+    <h2>Happy married life,<br><span class="script">Fathima.</span></h2>
+
+    <p>
+      May your forever be filled with hands that hold yours,
+      hearts that understand each other, dreams you build together,
+      and a love that becomes more beautiful with time.
+    </p>
+
+    <div class="final-cats">🐈 🐈‍⬛</div>
+
+    <p class="script" style="font-size:25px">
+      Here's to your beautiful journey ♡
+    </p>
+
+    <button class="btn btn-light" onclick="restartSurprise()">
+      ↺ Relive the surprise
+    </button>
+  </div>
+
+  <div class="page-count">
+    <div class="dots" id="dots6"></div>
+    <span>06 / 06　♡</span>
+  </div>
+</section>
+
+
+<!-- FLOATING CAT GUIDE -->
+
+<div id="kitty-guide">
+  <div id="kitty-bubble">
+    <button id="kitty-close" onclick="hideKittyBubble()" aria-label="Hide message">×</button>
+
+    <p id="kitty-message">
+      Meow! Fathima, I have a little surprise just for you! ♡
+    </p>
+
+    <button id="kitty-next" onclick="kittyNext()">Follow me →</button>
+  </div>
+
+  <button id="kitty-character" onclick="kittyTalk()" aria-label="Talk to the cat guide">
+    <img
+      src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=400&q=85"
+      alt="Your fluffy cat guide">
+    <span class="kitty-paw">🐾</span>
+  </button>
+</div>
+
+
+<script>
+let currentPage = 1;
+const totalPages = 6;
+let kittyBubbleVisible = true;
+
+/* CAT GUIDE MESSAGES */
+
+const kittyMessages = {
+  1: {
+    message: "Meow! Fathima, I have a little surprise just for you! ♡",
+    button: "Follow me →"
+  },
+  2: {
+    message: "Psst! Look how beautiful our girl is! Doesn't she look lovely? 🤍",
+    button: "Show me more →"
+  },
+  3: {
+    message: "I've found some precious memories! Let's look at them together. 🐾",
+    button: "Next surprise →"
+  },
+  4: {
+    message: "Yay! It's cat time! Tap the pictures to meet my furry friends! 🐱",
+    button: "More happiness →"
+  },
+  5: {
+    message: "I have three little wishes for your beautiful new journey. ♡",
+    button: "One last surprise →"
+  },
+  6: {
+    message: "Mission complete! Sending you a million kitty hugs, Fathima! Happy married life! 🤍",
+    button: "Start again ↺"
+  }
+};
+
+/* PAGE NAVIGATION */
+
+function showPage(pageNumber) {
+  if (pageNumber < 1 || pageNumber > totalPages) return;
+
+  document.querySelectorAll('.page').forEach(function(page) {
+    page.classList.remove('active');
+  });
+
+  document.getElementById('page' + pageNumber).classList.add('active');
+
+  currentPage = pageNumber;
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+  createDots();
+  updateKittyGuide();
+}
+
+/* PAGE INDICATORS */
+
+function createDots() {
+  for (let page = 1; page <= totalPages; page++) {
+    const container = document.getElementById('dots' + page);
+
+    if (!container) continue;
+
+    container.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+      const dot = document.createElement('span');
+
+      dot.className = 'dot' + (i === page ? ' active' : '');
+      dot.style.cursor = 'pointer';
+      dot.setAttribute('aria-label', 'Go to page ' + i);
+
+      dot.addEventListener('click', function() {
+        showPage(i);
+      });
+
+      container.appendChild(dot);
+    }
+  }
+}
+
+/* CAT GUIDE */
+
+function updateKittyGuide() {
+  const content = kittyMessages[currentPage];
+
+  document.getElementById('kitty-message').textContent = content.message;
+  document.getElementById('kitty-next').textContent = content.button;
+
+  document.getElementById('kitty-bubble').style.display =
+    kittyBubbleVisible ? 'block' : 'none';
+}
+
+function kittyNext() {
+  if (currentPage === totalPages) {
+    showPage(1);
+  } else {
+    showPage(currentPage + 1);
+  }
+
+  kittyBubbleVisible = true;
+  updateKittyGuide();
+}
+
+function kittyTalk() {
+  kittyBubbleVisible = true;
+  updateKittyGuide();
+
+  const cat = document.getElementById('kitty-character');
+
+  cat.animate(
+    [
+      { transform: 'scale(1)' },
+      { transform: 'scale(1.1)' },
+      { transform: 'scale(1)' }
+    ],
+    { duration: 400 }
+  );
+}
+
+function hideKittyBubble() {
+  kittyBubbleVisible = false;
+  updateKittyGuide();
+}
+
+/* CAT CORNER REACTIONS */
+
+function catMessage(type) {
+  const messages = {
+    Sweetheart: 'Sending you the biggest virtual kitty hug! 🐾♡',
+    Boss: 'Reminder: You are the main character. Meow! 😽',
+    Cuddle: 'Wishing you a lifetime of warmth, love, and cuddles! ♡'
+  };
+
+  document.getElementById('catMessage').textContent = messages[type];
+
+  makeHeart();
+}
+
+/* FLOATING HEART EFFECT */
+
+function makeHeart() {
+  const heart = document.createElement('span');
+  const symbols = ['♡', '♥', '🐾', '✧'];
+
+  heart.className = 'heart';
+  heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+  heart.style.left = Math.random() * 90 + '%';
+  heart.style.fontSize = (15 + Math.random() * 18) + 'px';
+
+  heart.style.color = [
+    '#bd8eb4',
+    '#a68abd',
+    '#f1a8c6'
+  ][Math.floor(Math.random() * 3)];
+
+  document.body.appendChild(heart);
+
+  setTimeout(function() {
+    heart.remove();
+  }, 7000);
+}
+
+setInterval(function() {
+  if (Math.random() > 0.4) makeHeart();
+}, 2200);
+
+/* RESTART */
+
+function restartSurprise() {
+  kittyBubbleVisible = true;
+  showPage(1);
+  makeHeart();
+}
+
+/* MOBILE SWIPE NAVIGATION */
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener('touchstart', function(event) {
+  touchStartX = event.changedTouches[0].screenX;
+  touchStartY = event.changedTouches[0].screenY;
+}, { passive: true });
+
+document.addEventListener('touchend', function(event) {
+  const touchEndX = event.changedTouches[0].screenX;
+  const touchEndY = event.changedTouches[0].screenY;
+
+  const diffX = touchEndX - touchStartX;
+  const diffY = touchEndY - touchStartY;
+
+  /* Ignore small gestures and vertical scrolling. */
+  if (
+    Math.abs(diffX) > 100 &&
+    Math.abs(diffX) > Math.abs(diffY) * 1.3
+  ) {
+    if (diffX < 0 && currentPage < totalPages) {
+      showPage(currentPage + 1);
+    } else if (diffX > 0 && currentPage > 1) {
+      showPage(currentPage - 1);
+    }
+  }
+});
+
+/* INITIALIZE */
+
+createDots();
+updateKittyGuide();
+</script>
+
+</body>
+</html>
